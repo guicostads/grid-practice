@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+:root {
+  --violet: hsl(263, 55%, 52%);
+  --darkgrayblue: hsl(217, 19%, 35%);
+  --lightgrayblue: hsl(210, 46%, 95%);
+  --darkblackblue: hsl(219, 29%, 14%);
+  --lightgray: hsl(0, 0%, 81%);
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--lightgrayblue);
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
+}
+
+.main-container {
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+  grid-template-rows: repeat(5, auto);
+  row-gap: 1.5rem;
+}
+
+.main-container > article {
+  border-radius: 1em;
+  padding: 2.2rem;
+}
+
+.main-container img {
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 2em;
+  height: 2em;
+  margin-bottom: 1.3rem;
+}
+
+.main-container p {
+  font-size: 0.8125rem;
+}
+
+.main-container h1 {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+
+.daniel {
+  background-color: var(--violet);
+  position: relative;
+  height: 100%;
+}
+
+.jonathan {
+  background-color: var(--darkgrayblue);
+  position: relative;
+  height: 100%;
+}
+
+.daniel h1,
+.jonathan h1 {
+  color: var(--lightgray);
+}
+
+.jeanette {
+  background-color: white;
+  position: relative;
+  height: 100%;
+}
+
+.patrick {
+  background-color: var(--darkblackblue);
+  position: relative;
+  height: 100%;
+}
+
+.kira {
+  background-color: white;
+  position: relative;
+  height: 100%;
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 1.9em;
+  left: 5em;
+}
+
+@media screen and (min-width: 769px) {
+  .main-container {
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(4, 19rem);
+    gap: 1.5em;
+  }
+
+  .daniel {
+    grid-column: 1/3;
+  }
+
+  .kira {
+    grid-column: 4;
+    grid-row: 1/3;
+  }
+
+  .kira  p {
+    font-size: 1rem;
+    
+  }
+
+  .patrick {
+    grid-column: 2/4;
+  }
+}
